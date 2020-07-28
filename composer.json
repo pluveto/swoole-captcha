@@ -1,0 +1,30 @@
+{
+  "name": "pluveto/swoole-captcha",
+  "description": "One php captcha based on php-captcha",
+  "keywords": ["captcha", "swoole", "hyperf", "easyswoole", "swoft"],
+  "homepage": "https://github.com/pluveto/swoole-captcha",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Minho",
+      "email": "lifei6671@163.com",
+      "homepage": "https://www.iminho.me",
+      "role": "Developer"
+    },
+    {
+      "name": "Pluveto",
+      "email": "i@pluvet.com",
+      "homepage": "https://www.pluvet.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.1",
+    "psr/http-message": "^1.0",
+    "ext-gd": "*"
+  },
+  "autoload": {
+    "psr-4": { "Pluveto\\Swoole\\Captcha\\": "src/" }
+  },
+  "minimum-stability": "dev"
+}
