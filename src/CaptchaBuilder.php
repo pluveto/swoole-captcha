@@ -17,7 +17,7 @@ class CaptchaBuilder implements CaptchaBuilderInterface
     /**
      * @var resource 验证码图片
      */
-    protected object $image;
+    protected $image;
     /**
      * @var string 验证码文字
      */
@@ -69,7 +69,7 @@ class CaptchaBuilder implements CaptchaBuilderInterface
     public function __construct()
     {
         setlocale(LC_ALL, 'zh_CN.UTF-8');
-
+        $this->image = null;
         $this->initialize([]);
     }
 
@@ -181,13 +181,15 @@ class CaptchaBuilder implements CaptchaBuilderInterface
     }
     public function __destruct()
     {
-        $this->destroy();
+        if ($this->image) {
+            $this->destroy();
+        }
     }
 
     private function getFontColor()
     {
-        list($red, $green, $blue) = $this->getDeepColor();
-
+        [$red, $green, $blue] = $this->getDeepColor();
+        var_dump([$red, $green, $blue]);
         return imagecolorallocate($this->image, $red, $green, $blue);
     }
     /**
