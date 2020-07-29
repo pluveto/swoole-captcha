@@ -43,7 +43,7 @@ public function getCaptcha()
     // 将验证码放到缓存中
     $redis = ApplicationContext::getContainer()->get(\Hyperf\Redis\Redis::class);
     $redis->set('captcha_' . str_replace("-", "", $uuid), $text, 60);
-
+    
     if ($req->raw) {
         // 直接输出验证码
         return $captha->output($this->response->raw(""), 1);
