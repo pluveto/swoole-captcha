@@ -331,4 +331,28 @@ class CaptchaBuilder implements CaptchaBuilderInterface
 
         return [$red, $green, $blue];
     }
+
+    /**
+     * Get 随机字符
+     *
+     * @return  string
+     */ 
+    public function getCharacters()
+    {
+        return $this->characters;
+    }
+
+    /**
+     * Set 随机字符
+     *
+     * @param  string  $characters  随机字符
+     *
+     * @return  self
+     */ 
+    public function setCharacters(string $characters)
+    {
+        $this->characters = $characters;
+
+        return $this;
+    }
 }
