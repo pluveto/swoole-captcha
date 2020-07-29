@@ -2,7 +2,13 @@
 
 基于 php-captcha 的验证码插件。对 PSR7 适配。增加 Base64 输出和字节输出。
 
-使用方法示范：
+## 安装
+
+```bash
+$ composer require pluveto/swoole-captcha dev-master
+```
+
+## 使用
 
 ```php
 /**
